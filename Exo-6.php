@@ -1,7 +1,6 @@
 <?php
 
-$mode = "dark";
-
+$dark_mode = true;
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +26,9 @@ $mode = "dark";
 </head>
 
 <body>
-    <div id="myElement" class="<?= $mode ?>">
+    <input type="checkbox" id="dark_mode" name="dark_mode" <?php echo($dark_mode == true ? "checked": "") ?>>
+    <label for="dark_mode">dark mode</label>
+    <div id="myElement" class="<?php echo($dark_mode == true ? "dark" : "light") ?>">
         <p>Hello World</p>
     </div>
 </body>
